@@ -27,9 +27,9 @@ class DynamicArray(object):
             return IndexError("Out of bounds!")
         if self.size == self.capacity:
             self._resize(2*self.capacity)
-        for i in range(index,self.size):
-            self.arr[i+1] = self.arr[i]
-        self.arr[index] = item
+        for i in range(self.size-1,index,-1):
+            self.Arr[i+1] = self.Arr[i]
+        self.Arr[index] = item
         self.size += 1
 
     def delete(self):
@@ -42,8 +42,8 @@ class DynamicArray(object):
             return IndexError("Array is empty")
         if not 0<=idx<self.size:
             return IndexError("Index out of bounds")
-        for i in range(idx,self.Arr):
-            self.arr[i] = self.arr[i+1]
+        for i in range(idx,self.size-1):
+            self.Arr[i] = self.Arr[i+1]
         self.Arr[self.size] = 0
         self.size -= 1
 
@@ -60,4 +60,9 @@ class DynamicArray(object):
 
     def print_arr(self):
         for i in range(self.size):
-            print(self.Arr[i])
+            print(f"{self.Arr[i]}->",end=" ")
+        print("End")
+
+    def insertList(self, inserting_list):
+        for element in inserting_list:
+            self.append(element)
