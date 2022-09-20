@@ -1,5 +1,5 @@
 from dynamicArray import DynamicArray
-from arepl_dump import dump
+from linkedList import *
 
 
 print("--------------------Dynamic Array--------------------")
@@ -32,9 +32,17 @@ arr2.insertList(listA)
 arr2.print_arr()
 
 
+print("--------------------Linked List--------------------")
 
-
-
-
-
-
+# Create a new linked list
+linkedList1 = SLinkedList()
+# Append a value
+linkedList1.append(5)
+linkedList1.append(6)
+linkedList1.append(7)
+# print linked list
+linkedList1.listPrint()
+# prepend to the linked list
+linkedList1.prepend(4)
+# print linked list again
+linkedList1.listPrint()
