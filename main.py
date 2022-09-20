@@ -1,8 +1,9 @@
 from dynamicArray import DynamicArray
 from linkedList import *
+from doublyLinkedList import *
 
 
-print("--------------------Dynamic Array--------------------")
+print("--------------------Dynamic Array (dynamicArray.py)--------------------")
 #create a new dynamic array
 arr = DynamicArray()
 #append some numbers
@@ -32,17 +33,42 @@ arr2.insertList(listA)
 arr2.print_arr()
 
 
-print("--------------------Linked List--------------------")
+print("--------------------Linked List (linkedList.py)--------------------")
 
 # Create a new linked list
 linkedList1 = SLinkedList()
-# Append a value
+# Append some values
 linkedList1.append(5)
 linkedList1.append(6)
-linkedList1.append(7)
+linkedList1.append(8)
 # print linked list
 linkedList1.listPrint()
 # prepend to the linked list
 linkedList1.prepend(4)
 # print linked list again
 linkedList1.listPrint()
+# Insert between a linked list
+linkedList1.insertBetween(4,7)
+# print linked list again
+linkedList1.listPrint()
+# delete first node
+linkedList1.removeFirstNode()
+# print linked list again
+linkedList1.listPrint()
+# Remove a node with a key
+linkedList1.removeKeyElement(6)
+# print linked list again
+linkedList1.listPrint()
+#Try to remove a node that does not exist
+linkedList1.removeKeyElement(25)
+
+
+
+print("--------------------Doubly Linked List (doublyLinkedList.py)--------------------")
+# Single Linked List VS Doubly Linked List
+# Time complexity for insertion and deletion for single linked list is O(n)
+# Time complexity for insertion and deletion for doubly linked list is O(1)
+# You can traverse both way with doubly linked list
+# Single linked list: consumes less memory
+
+ 
