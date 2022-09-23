@@ -109,7 +109,7 @@ newStack.printStack()
 newStack.push(5)
 # push more values
 newStack.push(6)
-# push more values
+# push more valuesgit 
 newStack.push(7)
 # print stack
 newStack.printStack()
@@ -117,3 +117,6 @@ newStack.printStack()
 newStack.peak()
 # Size of the stack
 newStack.size()
+
+
+print("--------------------Queue(stack.py)--------------------")
