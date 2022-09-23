@@ -2,7 +2,7 @@ from dynamicArray import DynamicArray
 from linkedList import *
 from doublyLinkedList import *
 from myStack import *
-# from queue import *
+from myQueue import *
 
 
 print("--------------------Dynamic Array (dynamicArray.py)--------------------")
@@ -120,3 +120,15 @@ newStack.size()
 
 
 print("--------------------Queue(stack.py)--------------------")
+
+# Initialize queue with its size
+myQueue1 = MyQueue(5)
+# enqueue some numbers to the queue
+myQueue1.myEnqueue(1)
+myQueue1.myEnqueue(2)
+myQueue1.myEnqueue(3)
+myQueue1.myEnqueue(4)
+myQueue1.myEnqueue(5)
+myQueue1.printMyQueue()
+# queue overflow should print error
+myQueue1.myEnqueue(6)
