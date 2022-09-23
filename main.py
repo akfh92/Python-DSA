@@ -1,6 +1,8 @@
 from dynamicArray import DynamicArray
 from linkedList import *
 from doublyLinkedList import *
+from myStack import *
+# from queue import *
 
 
 print("--------------------Dynamic Array (dynamicArray.py)--------------------")
@@ -71,4 +73,47 @@ print("--------------------Doubly Linked List (doublyLinkedList.py)-------------
 # You can traverse both way with doubly linked list
 # Single linked list: consumes less memory
 
- 
+
+# Create a new doubly linked list
+linkedList2 = dLinkedList()
+# append some values
+linkedList2.append(10)
+linkedList2.append(11)
+linkedList2.append(12)
+# print doubly linked list
+linkedList2.listPrint()
+# preppend some values
+linkedList2.prepend(9)
+linkedList2.listPrint()
+
+
+print("--------------------Stack(stack.py)--------------------")
+
+# create a stack
+newStack= myStack(1)
+# print stack
+newStack.printStack()
+# push elements to the stack
+newStack.push(2)
+newStack.push(3)
+newStack.push(4)
+# print stack
+newStack.printStack()
+#pop stack
+newStack.pop()
+# pop stack again
+newStack.pop()
+# print stack
+newStack.printStack()
+# push more values
+newStack.push(5)
+# push more values
+newStack.push(6)
+# push more values
+newStack.push(7)
+# print stack
+newStack.printStack()
+# peack
+newStack.peak()
+# Size of the stack
+newStack.size()
