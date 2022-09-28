@@ -95,7 +95,7 @@ linkedList2.printNode()
 
 
 print("\n\n")
-print("--------------------Stack(stack.py)--------------------")
+print("--------------------Stack(myStack.py)--------------------")
 print("\n\n")
 # create a stack
 newStack= myStack(1)
@@ -128,7 +128,7 @@ newStack.size()
 
 
 print("\n\n")
-print("--------------------Queue(stack.py)--------------------")
+print("--------------------Queue(myQueue.py)--------------------")
 print("\n\n")
 
 # Initialize queue with its size
@@ -162,5 +162,8 @@ myQueue1.myDequeue()
 myQueue1.printMyQueue()
 
 
+print("\n\n")
+print("--------------------Hash Table(myHashTable.py)--------------------")
+print("\n\n")
 
 
