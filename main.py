@@ -3,9 +3,11 @@ from linkedList import *
 from doublyLinkedList import *
 from myStack import *
 from myQueue import *
+from myHashTable import *
 
-
+print("\n\n")
 print("--------------------Dynamic Array (dynamicArray.py)--------------------")
+print("\n\n")
 #create a new dynamic array
 arr = DynamicArray()
 #append some numbers
@@ -26,8 +28,6 @@ arr.print_arr()
 #removeAt
 arr.removeAt(1)
 arr.print_arr()
-
-
 # List to dynamic array
 arr2 = DynamicArray()
 listA = [1,2,3,4,5,10]
@@ -35,8 +35,10 @@ arr2.insertList(listA)
 arr2.print_arr()
 
 
-print("--------------------Linked List (linkedList.py)--------------------")
 
+print("\n\n")
+print("--------------------Linked List (linkedList.py)--------------------")
+print("\n\n")
 # Create a new linked list
 linkedList1 = SLinkedList()
 # Append some values
@@ -65,15 +67,14 @@ linkedList1.listPrint()
 linkedList1.removeKeyElement(25)
 
 
-
+print("\n\n")
 print("--------------------Doubly Linked List (doublyLinkedList.py)--------------------")
+print("\n\n")
 # Single Linked List VS Doubly Linked List
 # Time complexity for insertion and deletion for single linked list is O(n)
 # Time complexity for insertion and deletion for doubly linked list is O(1)
 # You can traverse both way with doubly linked list
 # Single linked list: consumes less memory
-
-
 # Create a new doubly linked list
 linkedList2 = dLinkedList()
 # append some values
@@ -81,14 +82,21 @@ linkedList2.append(10)
 linkedList2.append(11)
 linkedList2.append(12)
 # print doubly linked list
-linkedList2.listPrint()
+linkedList2.printNode()
 # preppend some values
 linkedList2.prepend(9)
-linkedList2.listPrint()
+linkedList2.printNode()
+# removeFirstNode
+linkedList2.removeFirstNode()
+linkedList2.printNode()
+# remove last Node
+linkedList2.removeLastElement()
+linkedList2.printNode()
 
 
+print("\n\n")
 print("--------------------Stack(stack.py)--------------------")
-
+print("\n\n")
 # create a stack
 newStack= myStack(1)
 # print stack
@@ -119,7 +127,9 @@ newStack.peak()
 newStack.size()
 
 
+print("\n\n")
 print("--------------------Queue(stack.py)--------------------")
+print("\n\n")
 
 # Initialize queue with its size
 myQueue1 = MyQueue(5)
@@ -130,5 +140,27 @@ myQueue1.myEnqueue(3)
 myQueue1.myEnqueue(4)
 myQueue1.myEnqueue(5)
 myQueue1.printMyQueue()
+
 # queue overflow should print error
 myQueue1.myEnqueue(6)
+
+# dequeue 
+myQueue1.myDequeue()
+myQueue1.myDequeue()
+myQueue1.myDequeue()
+# print queue again
+myQueue1.printMyQueue()
+
+
+# Enqueue some numbers again
+myQueue1.myEnqueue(6)
+myQueue1.printMyQueue()
+
+# dequeu again
+myQueue1.myDequeue()
+# print queue again
+myQueue1.printMyQueue()
+
+
+
+

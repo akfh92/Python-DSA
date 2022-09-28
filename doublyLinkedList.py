@@ -1,33 +1,22 @@
 class Node:
-    def __init__(self=None, dataVal=None):
+    def __init__(self, dataVal=None):
         self.prevVal = None
         self.nextVal = None
         self.dataVal = dataVal
         
         
 class dLinkedList:
-    
-    
-    def __init__(self,dataVal = None):
+    def __init__(self):
         self.headVal = None
-
-    def listPrint(self):
-        temp = self.headVal
-        while temp.nextVal:
-            print(f"{temp.dataVal} --> ", end=" ")
-            temp=temp.nextVal
-        print(temp.dataVal," --> ",end=" ")
-        print("end")
-        
-        
-
         
 
     def prepend(self,val):
-        newNode = Node(val)
-        temp = self.headVal
-        temp.prevVal = newNode
-        self.headVal = temp.prevVal
+        newNode=Node(val)
+        if self.headVal == None:
+            self.headVal = newNode
+            return
+        newNode.nextVal = self.headVal
+        self.headVal= newNode
 
 
     def append(self,val):
@@ -35,22 +24,50 @@ class dLinkedList:
         if self.headVal == None:
             self.headVal = newNode
             return
-        temp = self.headVal
-        while temp.nextVal:
-            temp=temp.nextVal
-        temp.nextVal = newNode
+        counter = self.headVal
+        while counter.nextVal != None:
+            counter = counter.nextVal
+        counter.nextVal = newNode
+        newNode.prevVal = counter
         
         
+    def printNode(self):
+        if self.headVal is None:
+            print("Linked List is Empty!")
+            return
+        counter = self.headVal
+        while counter.nextVal != None:
+            print(counter.dataVal, end = " -> ")
+            counter=counter.nextVal
+        print(counter.dataVal, end=" -> ")
+        print("END")
 
         
-        
-#     def insertBetween(self,idx,val):
 
 
         
-#     def removeFirstNode(self):
+    def removeFirstNode(self):
+        if self.headVal == None:
+            print("Linked List is Empty!")
+            return
+        if self.headVal.nextVal == None:
+            self.headVal = None
+            return
+        self.headVal = self.headVal.nextVal
+        self.headVal.prevVal = None
 
         
-#     def removeKeyElement(self,key):
-
+    def removeLastElement(self):
+        if self.headVal == None:
+            print("Empty List")
+            return
+        if self.headVal.nextVal == None:
+            self.headVal = None
+            return
+        counter = self.headVal
+        while counter.nextVal != None:
+            counter = counter.nextVal
         
+        counter=counter.prevVal
+        counter.nextVal = None
+            

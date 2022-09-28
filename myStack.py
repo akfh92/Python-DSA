@@ -23,7 +23,6 @@ class myStack:
         
         
     def push(self, val):
-        print(self.top,"--------",len(self.myStack))
         if self.top == len(self.myStack):
             self.myStack.append(val)
             self.top+=1
