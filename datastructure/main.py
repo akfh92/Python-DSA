@@ -166,4 +166,9 @@ print("\n\n")
 print("--------------------Hash Table(myHashTable.py)--------------------")
 print("\n\n")
 
+myHash = myHashTable()
+myHash.insert("ab",1)
+# myHash.insert(2,"cd")
+# myHash.insert(3,"ef")
 
+# print(myHash.get(1))
